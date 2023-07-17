@@ -1,0 +1,24 @@
+.AllSchedule{
+  width: 100%;
+}
+.AllSchedule-header{
+  width: 100%;
+  height: 40px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  background-color: var(--dark-blue);
+  padding: 0 20px;
+}
+.AllSchedule-header p{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--background);
+}
+.AllSchedule-header span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4.5rem;
+  color: var(--background);
+}

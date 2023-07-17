@@ -1,6 +1,5 @@
 import React from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import doctor from '../../img/doctor.png'
 import './Doctors.css'
 

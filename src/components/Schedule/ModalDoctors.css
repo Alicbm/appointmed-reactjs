@@ -1,0 +1,79 @@
+.ModalDoctors{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+}
+.ModalDoctors.show{
+  animation: modalDoctorsShow 1s forwards ease-in-out;
+}
+.ModalDoctors.unshow{
+  animation: modalDcotorsUnshow 1s ease-in-out forwards;
+}
+@keyframes modalDoctorsShow{
+  0%{
+    transform: translateX(-100%);
+  }100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes modalDcotorsUnshow{
+  0%{
+    transform: translateX(0%);
+  }100%{
+    transform: translateX(-100%);
+  }
+}
+.ModalDoctors-modal{
+  width: 230px;
+  height: 100%;
+  background-color: var(--background);
+}
+.ModalDoctors-modal__title{
+  width: 100%;
+  height: 60px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--background);
+  background-color: var(--light-blue);
+  margin-bottom: 15px;
+}
+.ModalDoctors-modal__title h2{
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+}
+.ModalDoctors-modal__title span{
+  position: absolute;
+  top: -17px;
+  right: 5px;
+  font-size: 5rem;
+}
+.ModalDoctors-modal__head{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--black);
+  padding: 10px 20px;
+}
+.ModalDoctors-modal__list{
+  padding: 20px;
+}
+.ModalDoctors-modal__list-item{
+  width: 90%;
+  margin: 0 auto 15px auto;
+}
+.ModalDoctors-modal__list-item h3{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.ModalDoctors-modal__list-item p{
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+

@@ -4,6 +4,7 @@ import Header from './components/Header/Header';
 import Home from './components/Home/Home';
 import Footer from './components/Footer/Footer';
 import Doctors from './components/Doctors/Doctors';
+import AllSchedule from './components/Schedule/AllSchedule';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />}/>
         <Route path='/doctores' element={<Doctors />}/>
+        <Route path='/schedule' element={<AllSchedule />}/>
       </Routes>
       <Footer />
     </HashRouter>
