@@ -1,0 +1,76 @@
+.Doctors{
+  width: 100%;
+}
+.Doctors-title{
+  width: 50%;
+  max-width: 190px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  text-align: center;
+  margin: 20px auto;
+}
+.Doctors-categories{
+  width: 90%;
+  margin: 0 auto;
+}
+.Doctors-categories__category{
+  border-bottom: 1px solid var(--dark-blue);
+  margin-bottom: 20px;
+}
+.Doctors-categories__category-head{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+.Doctors-categories__category-head h2{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.Doctors-categories__category-head span{
+  font-size: 4rem;
+}
+.Doctors-categories__category-body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.Doctors-categories__category-body__doctor{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.Doctors-categories__category-body__doctor img{
+  width: 100px;
+  border-radius: 50%;
+}
+.Doctors-categories__category-body__doctor h3{
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-blue);
+}
+.Doctors-categories__category-body__doctor h4{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--black);
+}
+.Doctors-categories__category-body__doctor p{
+  width: 100%;
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: center;
+  color: #959595;
+}
+
+
