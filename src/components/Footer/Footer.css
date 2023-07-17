@@ -1,0 +1,25 @@
+.Footer{
+  width: 100%;
+  background-color: var(--dark-blue);
+  padding: 30px;
+}
+.Footer-icons{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0 30px;
+}
+.Footer-icons span{
+  font-size: 7rem;
+  color: var(--background);
+}
+.Footer-logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--background);
+  padding-top: 20px;
+}
+.Footer-logo img{
+  width: 120px;
+}

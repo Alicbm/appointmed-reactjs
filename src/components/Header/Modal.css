@@ -1,0 +1,66 @@
+.Modal{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: end;
+  background: rgba(0, 0, 0, 0.8);
+}
+.Modal.modal-show{
+  animation: modalShow 1s forwards ease-in-out;
+}
+.modal-unshow{
+  animation: modalUnshow 1s ease-in-out forwards;
+}
+@keyframes modalShow{
+  0%{
+    transform: translateX(100%);
+  }100%{
+    transform: translateX(0%);
+  }
+}
+@keyframes modalUnshow{
+  0%{
+    transform: translateX(0%);
+  }100%{
+    transform: translateX(100%);
+  }
+}
+
+.Modal-content{
+  width: 230px;
+  height: 100%;
+  background-color: var(--light-blue);
+}
+.Modal-content .Modal-content__close{
+  font-size: 5rem;
+  color: var(--background);
+  padding: 20px;
+}
+.Modal-content__sesion{
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.Modal-content__sesion h2, .Modal-content__menu h2{
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--background);
+  text-align: end;
+  padding-right: 30px;
+  margin-bottom: 10px;
+}
+.Modal-content__sesion p a, .Modal-content__menu p a{
+  font-size: 1.6rem;
+  line-height: 2.5rem;
+  text-decoration: none;
+  color: var(--background);
+  font-weight: bold;
+}
+.Modal-content__sesion p, .Modal-content__menu p{
+  padding: 8px 20px;
+}
+.menu-selected{
+  border: 2px solid white;
+}
