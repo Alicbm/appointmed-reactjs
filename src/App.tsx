@@ -8,6 +8,7 @@ import AllSchedule from './components/Schedule/AllSchedule';
 import EachSchedule from './components/Schedule/EachSchedule';
 import EachDoctor from './components/EachDoctor/EachDoctor';
 import SignUp from './components/SignUp/SignUp';
+import SignIn from './components/SignIn/SignIn';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path='/each-schedule' element={<EachSchedule />}/>
         <Route path='/doctor-profile' element={<EachDoctor />}/>
         <Route path='/signup' element={<SignUp />}/>
+        <Route path='/signin' element={<SignIn />}/>
       </Routes>
       <Footer />
     </HashRouter>
