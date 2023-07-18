@@ -1,0 +1,54 @@
+.Horary{
+  width: 100%;
+  margin: 20px 0;
+}
+.Horary-container__day{
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  padding-left: 100px;
+}
+.Horary-container__day p{
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+.Horary-container__hour{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--white);
+  padding: 12px;
+}
+.Horary-container__hour.design-blue{
+  background-color: var(--background);
+}
+.Horary-container__hour-day{
+  width: 70px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+}
+.Horary-container__hour-hour{
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--black);
+}
+.Horary-container__button button{
+  width: 100%;
+  height: 50px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--light-blue);
+  background-color: var(--background);
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+
+
+
+
