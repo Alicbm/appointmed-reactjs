@@ -1,0 +1,51 @@
+.EachSchedule{
+  width: 95%;
+  margin: 0 auto;
+}
+.EachSchedule-title{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  padding-left: 30px;
+  margin: 25px 0;
+}
+.EachSchedule-carousel{
+  display: flex;
+  align-items: center;
+  overflow-x: scroll;
+  padding: 10px 0;
+}
+.EachSchedule-carousel__doctor{
+  min-width: 130px;
+  max-width: 130px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 15px;
+}
+.EachSchedule-carousel__doctor img{
+  width: 100px;
+  border-radius: 50%;
+}
+.EachSchedule-carousel__doctor h3{
+  width: 100%;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-blue);
+}
+.EachSchedule-carousel__doctor h4{
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--black);
+}
+.EachSchedule-carousel__doctor p{
+  width: 100%;
+  font-size: .9rem;
+  font-weight: bold;
+  text-align: center;
+  color: #959595;
+}
