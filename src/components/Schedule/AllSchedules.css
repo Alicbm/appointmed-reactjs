@@ -22,3 +22,7 @@
   font-size: 4.5rem;
   color: var(--background);
 }
+.AllSchedule-schedules{
+  width: 90%;
+  margin: 0 auto;
+}

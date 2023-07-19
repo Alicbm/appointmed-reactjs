@@ -11,28 +11,27 @@ const AllSchedule = () => {
 
   return (
     <div className="AllSchedule">
-      <div 
-        className="AllSchedule-header"
-        onClick={() => setModal(true)}
-      >
+      <div className="AllSchedule-header" onClick={() => setModal(true)}>
         <p>Doctors</p>
         <span>
           <MdOutlineKeyboardArrowRight />
         </span>
       </div>
-      
-      <Schedule 
-        state={morning} 
-        setState={setMorning}
-        title='Horario de la Mañana'
-      />
-      <Schedule 
-        state={afternoon} 
-        setState={setAfternoon}
-        title='Horario de la Tarde'
-      />
-      
-      <ModalDoctors modal={modal} setModal={setModal}/> 
+
+      <div className="AllSchedule-schedules">
+        <Schedule
+          state={morning}
+          setState={setMorning}
+          title="Horario de la Mañana"
+        />
+        <Schedule
+          state={afternoon}
+          setState={setAfternoon}
+          title="Horario de la Tarde"
+        />
+      </div>
+
+      <ModalDoctors modal={modal} setModal={setModal} />
     </div>
   );
 }
