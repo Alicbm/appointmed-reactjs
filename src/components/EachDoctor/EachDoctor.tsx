@@ -1,23 +1,25 @@
 import React from 'react'
 import { AiFillStar } from 'react-icons/ai'
-import doctor from '../../img/doctor.png'
 import Horary from './Horary'
+import { AppContext } from '../AppContext/AppContext'
 import './EachDoctor.css'
 
 const EachDoctor = () => {
+  const { doctorSelected } = React.useContext(AppContext)
+
   return (
     <div className='EachDoctor'>
       <div className='EachDoctor-profile'>
-        <img src={doctor} alt="" />
-        <h1>Guillermo Pascal</h1>
-        <h3>Médico General</h3>
-        <h4>pascal@mail.com</h4>
-        <h4>Santa Marta, Colombia</h4>
+        <img src={doctorSelected.image} alt="" />
+        <h1>{doctorSelected.name}</h1>
+        <h3>{doctorSelected.speciality}</h3>
+        <h4>{doctorSelected.email}</h4>
+        <h4>{doctorSelected.city}, Colombia</h4>
         <p>Nuestro Compromiso es Contigo</p>
       </div>
       <Horary />
       <div className='EachDoctor-writeComment'>
-        <h2 className='EachDoctor-writeComment__title'>Déjanos sabur tu opinión sobre el Dr. Guillermo Pascal</h2>
+        <h2 className='EachDoctor-writeComment__title'>Déjanos saber tu opinión sobre el Dr. {doctorSelected.name}</h2>
         <textarea placeholder='Escribe un comentario...'></textarea>
         <div className='EachDoctor-writeComment__buttons'>
           <button>Malo</button>
@@ -27,7 +29,7 @@ const EachDoctor = () => {
         <button className='EachDoctor-writeComment__send'>Enviar Comentario</button>
       </div>
       <div className='EachDoctor-comments'>
-        <h2 className='EachDoctor-comments__title'>Descubre lo que opinan otros usuarios del Dr. Guillermo Pascal</h2>
+        <h2 className='EachDoctor-comments__title'>Descubre lo que opinan otros usuarios del Dr. {doctorSelected.name}</h2>
         <div className='EachDoctor-comments__container'>
           <div className='EachDoctor-comments__container-comment'>
             <div className='EachDoctor-comments__container-comment__head'>

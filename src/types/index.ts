@@ -24,5 +24,5 @@ export type CategoryType = {
 export type AppContextType = {
   category: CategoryType[] | [],
   doctorSelected: DoctorType,
-  setDoctorSelected: (data: DoctorType) => void
+  setDoctorId: (id: string) => void
 }

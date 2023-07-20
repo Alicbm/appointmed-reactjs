@@ -6,7 +6,7 @@ import './Doctors.css'
 import { DoctorType } from "../../types";
 
 const Doctors = () => {
-  const { category, setDoctorSelected } = React.useContext(AppContext)
+  const { category, setDoctorId } = React.useContext(AppContext)
   const [section, setSection] = React.useState(true)
 
   const navigate = useNavigate()
@@ -41,7 +41,7 @@ const Doctors = () => {
                     onClick={
                       () => {
                         navigate('/doctor-profile')
-                        setDoctorSelected(doctor)
+                        setDoctorId((doctor.id).toString())
                       }
                     }
                   >
