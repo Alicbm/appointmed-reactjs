@@ -14,17 +14,19 @@ export function ContainerApp ({ children }: Props){
     setCategory(data);
   }
 
-  const dataDoctors = async () => {
-    const data = await getDoctor(doctorId)
-    setDoctorSelected(data);
-    console.log(data);
-  }
-
   React.useEffect(() => {
     dataCategories()
   }, [])
   
   React.useEffect(() => {
+    
+  const dataDoctors = async () => {
+    
+    console.log(doctorId);
+    const data = await getDoctor(doctorId)
+    setDoctorSelected(data);
+  }
+
     dataDoctors()
   }, [doctorId])
 

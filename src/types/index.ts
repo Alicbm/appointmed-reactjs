@@ -2,6 +2,21 @@ export interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
+export type HoraryType = {
+  id:number,
+  mondayStart: number,
+  mondayEnd: number,
+  tuesdayStart: number,
+  tuesdayEnd: number,
+  wednesdayStart: number,
+  wednesdayEnd: number,
+  thursdayStart: number,
+  thursdayEnd: number,
+  fridayStart: number,
+  fridayEnd: number,
+  doctorId: number,
+}
+
 export type DoctorType = {
   id: number,
   name: string,
@@ -11,7 +26,10 @@ export type DoctorType = {
   role: string,
   speciality: string,
   image: string,
-  categoryId: number
+  categoryId: number,
+  reviews: [] | null,
+  morning_schedule: HoraryType,
+  afternoon_schedule: HoraryType,
 } 
 
 export type CategoryType = {

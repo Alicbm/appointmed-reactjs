@@ -13,9 +13,10 @@
   padding: 20px;
 }
 .EachDoctor-profile img{
-  width: 120px;
-  height: 120px;
+  width: 130px;
+  height: 140px;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 20px;
 }
 .EachDoctor-profile h1{
