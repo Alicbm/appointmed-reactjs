@@ -5,7 +5,7 @@ import Modal from './Modal'
 import './Header.css'
 
 const Header = () => {
-  const [modal, setModal] = React.useState <boolean>(true)
+  const [modal, setModal] = React.useState <boolean>(false)
 
   return (
     <header className='Header'>
