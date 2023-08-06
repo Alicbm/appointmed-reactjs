@@ -1,13 +1,13 @@
 import React from 'react'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import ModalDoctors from './ModalDoctors';
-import Schedule from './Schedule';
+// import Schedule from './Schedule';
 import './AllSchedules.css'
 
 const AllSchedule = () => {
   const [modal, setModal] = React.useState(false)
-  const [morning, setMorning] = React.useState(true)
-  const [afternoon, setAfternoon] = React.useState(true)
+  // const [morning, setMorning] = React.useState(true)
+  // const [afternoon, setAfternoon] = React.useState(true)
 
   return (
     <div className="AllSchedule">
@@ -19,16 +19,16 @@ const AllSchedule = () => {
       </div>
 
       <div className="AllSchedule-schedules">
-        <Schedule
+        {/* <Schedule
           state={morning}
           setState={setMorning}
           title="Horario de la Mañana"
-        />
-        <Schedule
+        /> */}
+        {/* <Schedule
           state={afternoon}
           setState={setAfternoon}
           title="Horario de la Tarde"
-        />
+        /> */}
       </div>
 
       <ModalDoctors modal={modal} setModal={setModal} />

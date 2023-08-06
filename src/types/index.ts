@@ -2,20 +2,38 @@ export interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
-export type HoraryType = {
-  id:number,
-  mondayStart: number,
-  mondayEnd: number,
-  tuesdayStart: number,
-  tuesdayEnd: number,
-  wednesdayStart: number,
-  wednesdayEnd: number,
-  thursdayStart: number,
-  thursdayEnd: number,
-  fridayStart: number,
-  fridayEnd: number,
-  doctorId: number,
+export type DayType = {
+  id: number,
+  day: number,
+  start: number,
+  end: number,
+  morningId: number,
 }
+
+export type MorningType = {
+  id: number,
+  doctor_id: number,
+  monday: DayType,
+  tuesday: DayType,
+  wednesday: DayType,
+  thursday: DayType,
+  friday: DayType,
+}
+
+// export type HoraryType = {
+//   id:number,
+//   mondayStart: number,
+//   mondayEnd: number,
+//   tuesdayStart: number,
+//   tuesdayEnd: number,
+//   wednesdayStart: number,
+//   wednesdayEnd: number,
+//   thursdayStart: number,
+//   thursdayEnd: number,
+//   fridayStart: number,
+//   fridayEnd: number,
+//   doctorId: number,
+// }
 
 export type DoctorType = {
   id: number,
@@ -28,8 +46,8 @@ export type DoctorType = {
   image: string,
   categoryId: number,
   reviews: [] | null,
-  morning_schedule: HoraryType,
-  afternoon_schedule: HoraryType,
+  morning: MorningType,
+  afternoon: MorningType,
 } 
 
 export type CategoryType = {
@@ -42,5 +60,6 @@ export type CategoryType = {
 export type AppContextType = {
   category: CategoryType[] | [],
   doctorSelected: DoctorType,
-  setDoctorId: (id: string) => void
+  setDoctorId: (id: number) => void,
+  doctors: DoctorType[],
 }

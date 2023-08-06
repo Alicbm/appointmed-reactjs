@@ -6,8 +6,9 @@ export const AppContext = React.createContext <AppContextType> ({} as AppContext
 
 export function ContainerApp ({ children }: Props){
   const [category, setCategory] = React.useState <CategoryType[] | []> ([])
-  const [doctorId, setDoctorId] = React.useState <string> ('1')
+  const [doctorId, setDoctorId] = React.useState <number> (1)
   const [doctorSelected, setDoctorSelected] = React.useState({} as DoctorType)
+  const [doctors, setDoctors] = React.useState <DoctorType[] | []> ([])
 
   const dataCategories = async () => {
     const data = await getCategories()
@@ -21,10 +22,11 @@ export function ContainerApp ({ children }: Props){
   React.useEffect(() => {
     
   const dataDoctors = async () => {
-    
-    console.log(doctorId);
-    const data = await getDoctor(doctorId)
-    setDoctorSelected(data);
+    const allDoctors = await getDoctor()
+    setDoctors(allDoctors)
+
+    let oneDoctor = allDoctors.find((doctor: DoctorType) => doctor.id === doctorId)
+    setDoctorSelected(oneDoctor);
   }
 
     dataDoctors()
@@ -35,6 +37,7 @@ export function ContainerApp ({ children }: Props){
       category,
       doctorSelected,
       setDoctorId,
+      doctors
     }}>
       {children}
     </AppContext.Provider>

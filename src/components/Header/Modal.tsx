@@ -18,14 +18,14 @@ const Modal = ({ modal, setModal }:SetModal) => {
         ><RiCloseFill /></span>
         <div className='Modal-content__sesion'>
           <h2>Iniciar Sesión</h2>
-          <p><Link to='/'>Ingresa</Link></p>
-          <p><Link to='/'>Regístrate</Link></p>
+          <p><Link to='/login'>Ingresa</Link></p>
+          <p><Link to='/signup'>Regístrate</Link></p>
         </div>
         <div className='Modal-content__menu'>
           <h2>Menú</h2>
           <p className='menu-selected'><Link to='/'>Inicio</Link></p>
-          <p><Link to='/'>Afiliados</Link></p>
-          <p><Link to='/'>Doctores</Link></p>
+          <p><Link to='/profile'>Mi Perfil</Link></p>
+          <p><Link to='/doctors'>Doctores</Link></p>
           <p><Link to='/'>Horarios Disponibles</Link></p>
           <p><Link to='/'>Contáctanos</Link></p>
         </div>

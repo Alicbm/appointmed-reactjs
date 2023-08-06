@@ -3,8 +3,8 @@ import './Appointment.css'
 import Schedule from '../Schedule/Schedule';
 
 const Appointment = () => {
-  const [morning, setMorning] = React.useState(true)
-  const [afternoon, setAfternoon] = React.useState(true)
+  // const [morning, setMorning] = React.useState(true)
+  // const [afternoon, setAfternoon] = React.useState(true)
   
   return (
     <div className="Appointment">
@@ -25,7 +25,7 @@ const Appointment = () => {
           <option value="guillermoPascal">Guillermo Pascal</option>
         </select>
       </div>
-      <Schedule 
+      {/* <Schedule 
         state={morning} 
         setState={setMorning}
         title='Horario de la Mañana'
@@ -34,7 +34,7 @@ const Appointment = () => {
         state={afternoon} 
         setState={setAfternoon}
         title='Horario de la Tarde'
-      />
+      /> */}
     </div>
   );
 }

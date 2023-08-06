@@ -41,7 +41,7 @@ const Doctors = () => {
                     onClick={
                       () => {
                         navigate('/doctor-profile')
-                        setDoctorId((doctor.id).toString())
+                        setDoctorId((doctor.id))
                       }
                     }
                   >

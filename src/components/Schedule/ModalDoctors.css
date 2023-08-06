@@ -60,6 +60,8 @@
   padding: 10px 20px;
 }
 .ModalDoctors-modal__list{
+  height: 80vh;
+  overflow-y: scroll;
   padding: 20px;
 }
 .ModalDoctors-modal__list-item{

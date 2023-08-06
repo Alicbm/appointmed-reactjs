@@ -7,9 +7,9 @@ export const getCategories = async () => {
     .catch(err => console.log(err))
 }
 
-export const getDoctor = async (id: string ) => {
+export const getDoctor = async () => {
   return axios
-    .get(`http://localhost:3000/api/v1/doctors/${id}`)
+    .get(`http://localhost:3000/api/v1/doctors`)
     .then(res => res.data)
     .catch(err => console.log(err))
 }
