@@ -2,6 +2,16 @@ export interface Props {
   children: JSX.Element | JSX.Element[];
 }
 
+export type UserType  = {
+  id: number,
+  cellphone: string,
+  city: string,
+  email: string,
+  name: string,
+  password: string,
+  role: string,
+}
+
 export type DayType = {
   id: number,
   day: number,
@@ -62,4 +72,6 @@ export type AppContextType = {
   doctorSelected: DoctorType,
   setDoctorId: (id: number) => void,
   doctors: DoctorType[],
+  userLogin: UserType,
+  setUserLogin: (UserType: UserType) => void
 }

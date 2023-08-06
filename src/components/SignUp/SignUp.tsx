@@ -1,6 +1,7 @@
 import React from 'react'
 import logo from '../../img/appointmed_logo.png'
 import './SignUp.css'
+import { useNavigate } from 'react-router-dom'
 
 const SignUp = () => {
   const data = {
@@ -11,6 +12,8 @@ const SignUp = () => {
     password: '',
     repeatPassword: ''
   }
+
+  const navigate = useNavigate()
 
   const sendData = () => {
 
@@ -39,6 +42,8 @@ const SignUp = () => {
         .catch((error) => {
           console.error('Error al enviar el formulario:', error);
         });
+
+        navigate('/profile')
 
       }else{
       alert('Las contraseñas no coinciden')

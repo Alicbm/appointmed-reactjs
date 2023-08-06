@@ -1,5 +1,5 @@
 import React from 'react'
-import { AppContextType, CategoryType, DoctorType, Props } from '../../types/index'
+import { AppContextType, CategoryType, DoctorType, Props, UserType } from '../../types/index'
 import { getCategories, getDoctor } from '../../api'
 
 export const AppContext = React.createContext <AppContextType> ({} as AppContextType)
@@ -9,6 +9,7 @@ export function ContainerApp ({ children }: Props){
   const [doctorId, setDoctorId] = React.useState <number> (1)
   const [doctorSelected, setDoctorSelected] = React.useState({} as DoctorType)
   const [doctors, setDoctors] = React.useState <DoctorType[] | []> ([])
+  const [userLogin, setUserLogin] = React.useState ({} as UserType)
 
   const dataCategories = async () => {
     const data = await getCategories()
@@ -37,7 +38,9 @@ export function ContainerApp ({ children }: Props){
       category,
       doctorSelected,
       setDoctorId,
-      doctors
+      doctors,
+      userLogin, 
+      setUserLogin
     }}>
       {children}
     </AppContext.Provider>
