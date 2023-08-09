@@ -1,0 +1,51 @@
+.Modify{
+  width: 95%;
+  padding: 10px;
+  margin: 0 auto;
+}
+.Modify-item h2{
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--dark-blue);
+  margin-bottom: 5px;
+}
+.Modify-item input{
+  width: 100%;
+  height: 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #525252;
+  background-color: var(--background);
+  border-radius: 5px;
+  border: 1px solid var(--light-blue);
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+}
+.Modify-buttons{
+  width: 90%;
+  margin: 0 auto;
+}
+.Modify-buttons button:nth-child(1){
+  width: 100%;
+  height: 50px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--light-blue);
+  background-color: var(--background);
+  border: 2px solid var(--light-blue);
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.Modify-buttons button:nth-child(2){
+  width: 100%;
+  height: 50px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--background);
+  background-color: var(--light-blue);
+  border: none;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+

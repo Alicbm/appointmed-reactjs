@@ -4,7 +4,7 @@ import './Login.css'
 import { AppContext } from '../AppContext/AppContext'
 
 const Login = () => {
-  const { setUserLogin } = React.useContext(AppContext)
+  const { setUserLogin, setToken } = React.useContext(AppContext)
 
   const data = {
     email: '',
@@ -31,6 +31,7 @@ const Login = () => {
 
         if (data.user.id){
           setUserLogin(data.user);
+          setToken(data.token)
           navigate("/profile");
         } else {
           alert('El usuario o la contraseña es incorrecto')
@@ -53,7 +54,7 @@ const Login = () => {
         />
         <h2>Ingresa tu Contraseña:</h2>
         <input 
-          type="text" 
+          type="password" 
           placeholder='password123'
           onChange={(event) => data['password'] = event.target.value}
         />

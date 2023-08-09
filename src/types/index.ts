@@ -74,4 +74,6 @@ export type AppContextType = {
   doctors: DoctorType[],
   userLogin: UserType,
   setUserLogin: (UserType: UserType) => void
+  token: string, 
+  setToken: (token: string) => void
 }

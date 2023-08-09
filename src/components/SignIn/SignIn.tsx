@@ -1,47 +1,41 @@
 import React from 'react'
-import { BiSolidPencil } from 'react-icons/bi'
-import { AppContext } from '../AppContext/AppContext'
+import Info from './Info'
+import Modify from './Modify'
 import './SignIn.css'
 
 const SignIn = () => {
+  const [edit, setEdit] = React.useState <boolean> (false)
 
-  const { userLogin } = React.useContext(AppContext)
+  // const sendData = () => {
+  //   const newData = {
+      
+  //   };
+
+  //   fetch("http://localhost:3000/api/v1/auth/login", {
+  //     method: "PATCH",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify(newData),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((data) => {
+
+  //       if (data.user.id){
+          
+  //       } else {
+  //         alert('El usuario o la contraseña es incorrecto')
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.error("Error al enviar el formulario:", error);
+  //     });
+  // }
 
   return (
     <div className='SignIn'>
       <h1 className='SignIn-title'>Perfil del Usuario</h1>
-      <div className='SignIn-container'>
-        <div className='SignIn-container__item'>
-          <h2>Nombre:</h2>
-          <p>{userLogin?.name}</p>
-        </div>
-        <span className='SignIn-container__edit'><BiSolidPencil /></span>
-      </div>
-      <div className='SignIn-container'>
-        <div className='SignIn-container__item'>
-          <h2>Email:</h2>
-          <p>{userLogin?.email}</p>
-        </div>
-        <span className='SignIn-container__edit'><BiSolidPencil /></span>
-      </div>
-      <div className='SignIn-container'>
-        <div className='SignIn-container__item'>
-          <h2>Número de Teléfono:</h2>
-          <p>{userLogin?.cellphone}</p>
-        </div>
-        <span className='SignIn-container__edit'><BiSolidPencil /></span>
-      </div>
-      <div className='SignIn-container'>
-        <div className='SignIn-container__item'>
-          <h2>Ciudad de Residencia:</h2>
-          <p>{userLogin?.city}, Colombia</p>
-        </div>
-        <span className='SignIn-container__edit'><BiSolidPencil /></span>
-      </div>
-      <div className='SignIn-container__buttons'>
-        <button>Cambiar Contraseña</button>
-        <button>Eliminar Cuenta</button>
-      </div>
+      { !edit ? <Info setEdit={setEdit} /> : <Modify setEdit={setEdit} /> }
     </div>
   )
 }

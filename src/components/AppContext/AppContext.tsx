@@ -10,6 +10,7 @@ export function ContainerApp ({ children }: Props){
   const [doctorSelected, setDoctorSelected] = React.useState({} as DoctorType)
   const [doctors, setDoctors] = React.useState <DoctorType[] | []> ([])
   const [userLogin, setUserLogin] = React.useState ({} as UserType)
+  const [token, setToken] = React.useState <string> ('')
 
   const dataCategories = async () => {
     const data = await getCategories()
@@ -40,7 +41,9 @@ export function ContainerApp ({ children }: Props){
       setDoctorId,
       doctors,
       userLogin, 
-      setUserLogin
+      setUserLogin,
+      token, 
+      setToken,
     }}>
       {children}
     </AppContext.Provider>
